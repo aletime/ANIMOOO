@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Motivación</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+
+        /* Estilo para el botón */
+        #motivateBtn {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        #motivateBtn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contenedor de la recompensa (oculto al principio) */
+        #reward {
+            display: none;
+        }
+
+        /* Estilo para el GIF */
+        #catGif {
+            max-width: 300px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el texto */
+        #motivationalText {
+            font-size: 32px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- El botón que se ve al principio -->
+    <button id="motivateBtn">Descubre tu motivación</button>
+
+    <!-- El contenedor oculto que aparece después -->
+    <div id="reward">
+        <!-- Puedes cambiar este enlace por el GIF que te guste -->
+        <img id="catGif" src="https://media.giphy.com/media/tYhG6e3P3q7G8/giphy.gif" alt="Gato saltando">
+        <p id="motivationalText">¡Sigue adelante, eres capaz de todo!</p>
+    </div>
+
+    <script>
+        const btn = document.getElementById('motivateBtn');
+        const reward = document.getElementById('reward');
+
+        
+        btn.addEventListener('click', function() {
+            
+            btn.style.display = 'none';
+            
+            reward.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
 
